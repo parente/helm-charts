@@ -99,8 +99,8 @@ spec:
       imagePullSecrets:
 {{ toYaml .Values.agents.image.pullSecrets | indent 8 }}
       {{- end }}
-      {{- if .Values.agents.priorityClassName }}
-      priorityClassName: {{ .Values.agents.priorityClassName }}
+      {{- if or .Values.providers.gke.autopilot .Values.agents.priorityClassName }}
+      priorityClassName: {{ default "datadog-agent-priority-class" .Values.agents.priorityClassName }}
       {{- end }}
       containers:
         {{- include "container-agent" . | nindent 6 }}

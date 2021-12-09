@@ -1,0 +1,9 @@
+{{- if or .Values.providers.gke.autopilot .Values.datadog.priorityClassName }}
+apiVersion: scheduling.k8s.io/v1
+description: Used for Datadog Agent Components to be scheduled with higher priority.
+kind: PriorityClass
+metadata:
+  name: {{ default "datadog-agent-priority-class" .Values.agents.priorityClassName }}
+preemptionPolicy: PreemptLowerPriority
+value: {{ .Values.agents.priorityClassValue }}
+{{- end }}
