@@ -1135,6 +1135,10 @@ agents:
     rollingUpdate:
       maxUnavailable: "10%"
 
+  # agents.priorityClassCreate -- Creates a priorityClass for the Datadog Agent's Daemonset pods.
+  priorityClassCreate: false
+
+
   # agents.priorityClassName -- Sets PriorityClassName if defined
   priorityClassName:
 
