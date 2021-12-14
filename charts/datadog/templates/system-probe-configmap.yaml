@@ -213,6 +213,7 @@ data:
             "stat64",
             "statfs",
             "sysinfo",
+            "symlinkat",
             "tgkill",
             "umask",
             "uname",
