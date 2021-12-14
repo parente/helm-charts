@@ -1,8 +1,16 @@
 # Datadog changelog
-## 2.27.6
+## 2.27.8
 
 * Adds `systemProbe.enableRuntimeCompiler`, `systemProbe.mountPackageManagementDirs` and `systemprobe.runtimeCompilationAssetDir` to configure eBPF runtime compiler in the system-probe.
 * Bind various mounts in the `system-probe` which are required for kernel header downloading.
+
+## 2.27.7
+
+* Nothing
+
+## 2.27.6
+
+* Default Datadog Agent image to `7.32.2`.
 
 ## 2.27.5
 
