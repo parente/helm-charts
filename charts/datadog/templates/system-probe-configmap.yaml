@@ -107,6 +107,7 @@ data:
             "fchownat",
             "fcntl",
             "fcntl64",
+            "flock",
             "fstat",
             "fstat64",
             "fstatfs",
